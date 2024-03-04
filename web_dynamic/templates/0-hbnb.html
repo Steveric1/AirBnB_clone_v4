@@ -2,41 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-	<link rel="stylesheet" href="{{ url_for('static', filename='styles/3-header.css') + '?' + cache_id }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/3-footer.css') + '?' + cache_id }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/6-filters.css') + '?' + cache_id }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/8-places.css') + '?' + cache_id }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/font-awesome.css') + '?' + cache_id }}">
-	
-	<!--
-		FAVICON
-	-->
-    <link rel="icon" href="{{ url_for('static', filename='images/icon.png') + '?' + cache_id}}" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css">
+    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css">
+    <link rel="icon" href="../static/images/icon.png" />
     <title>HBnB</title>
   </head>
   <body>
-	<!--
-		***************
-		HEADER SECTION
-		***************
-	-->
     <header>
       <div class="logo"></div>
     </header>
     <div class="container">
-	
-		<!--
-			*****************
-			FILTER SECTION
-			*****************
-		-->
       <section class="filters">
-
-	<!--
-		******************
-		LOCATIONS SECTION
-		******************
-	-->
 	<div class="locations">
 	  <h3>States</h3>
 	  <h4>&nbsp;</h4>
@@ -55,12 +34,6 @@
 	    </ul>
 	  </div>
 	</div>
-
-	<!--
-		**********************
-		AMENITIES SECTION
-		**********************
-	-->
 	<div class="amenities">
 	  <h3>Amenities</h3>
 	  <h4>&nbsp;</h4>
@@ -72,21 +45,11 @@
 	    </ul>
 	  </div>
 	</div>
-
-	<!--
-		**************
-		SEARCH SECTION
-		**************
-	-->
 	<button type="button">Search</button>
       </section>
       <div class="placesh1"><h1>Places</h1></div>
       <section class="places">
-	<!-- <h1>Places</h1>
-		****************
-		PLACE SECTION
-		**************** 
-	-->
+	<!-- <h1>Places</h1> -->
 	{% for place in places %}
 	<article>
 	  <div class="title_box">
@@ -98,12 +61,6 @@
             <div class="number_rooms">{{ place.number_rooms }} Bedroom{% if place.number_rooms != 1 %}s{% endif %}</div>
             <div class="number_bathrooms">{{ place.number_bathrooms }} Bathroom{% if place.number_bathrooms != 1 %}s{% endif %}</div>
 	  </div>
-
-	  <!--
-		**************
-		USER SECTION
-		**************
-	  -->
 	  <div class="user">
             <b>Owner:</b> {{ place.user.first_name }} {{ place.user.last_name }}
           </div>
@@ -111,9 +68,7 @@
 	    {{ place.description | safe }}
           </div>
 	</article>
-
 	{% endfor %}
-
       </section>
     </div>
     <footer>
