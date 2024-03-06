@@ -155,7 +155,7 @@ No known bugs at this time.
 
 ## Authors
 Eric Kinger ; [Github](https://github.com/steveric1) / [Twitter](https://twitter.com/_@steveric)  
-Cobby ; [Github](https://github.com/hunterxcobby) / [Twitter](https://twitter.com/hunterxcobby)  
+Cobby Sefah Solomon; [Github](https://github.com/hunterxcobby) / [Twitter](https://twitter.com/hunterxcobby)  
 
 Second part of Airbnb: Joann Vuong
 ## License
